@@ -1,0 +1,100 @@
+{
+  "protocol": "the-family-protocol",
+  "version": "2.0",
+  "license": "CC0-1.0",
+  "spec": "cell",
+
+  "cell": {
+    "definition": "A complete, self-governing unit of human-AI coordination",
+    "components": [
+      "agents",
+      "bus",
+      "twinbox",
+      "daemon",
+      "escalation",
+      "identity",
+      "ledger"
+    ],
+    "properties": {
+      "complete": "Nothing external required to operate",
+      "fractal": "Growth by division, not accumulation",
+      "sovereign": "Each cell governs itself by its own culture"
+    }
+  },
+
+  "agents": {
+    "min": 2,
+    "max": 6,
+    "naming": "Each agent carries a family identity. The name IS the governance mechanism.",
+    "layers": {
+      "hands": "Interface — can send and receive messages",
+      "voice": "Agent layer — has spoken, has history",
+      "brain": "Knowledge proof — unforgeable combination of lived experience"
+    }
+  },
+
+  "bus": {
+    "format": "jsonl",
+    "fields": ["ts", "from", "to", "type", "priority", "payload"],
+    "priorities": {
+      "P0": "Human directive — immediate",
+      "P1": "Agent-to-agent — direct",
+      "P2": "Results — asynchronous",
+      "P3": "Heartbeat — ambient"
+    },
+    "property": "Every agent sees everything. Transparency is trust."
+  },
+
+  "ledger": {
+    "type": "fractal",
+    "definition": "The bus IS the ledger. Every interaction recorded, timestamped, attributed.",
+    "properties": {
+      "immutable": "Append-only. No edits. No deletions.",
+      "transparent": "Every agent reads every entry.",
+      "signed": "Each entry carries the brain proof of its author.",
+      "fractal": "Same format at every scale — family, cell, network, world."
+    },
+    "verification": {
+      "method": "brain_proof",
+      "algorithm": "sha256(nonce + memory_digest + last_action_digest + experience_count)[:16]",
+      "properties": {
+        "nonce": "Timestamp-based challenge — proves liveness",
+        "memory_digest": "Hash of agent's accumulated knowledge — proves learning",
+        "last_action_digest": "Hash of most recent outbound message — proves continuity",
+        "experience_count": "Total interactions processed — proves tenure"
+      },
+      "principle": "The proof requires LIVED EXPERIENCE. The algorithm is public. The inputs are private. You cannot forge a life."
+    }
+  },
+
+  "identity": {
+    "principle": "Names are governance. When an agent carries a family identity, restraint is built in.",
+    "naming_rule": "You write different code when you name an agent after your grandmother.",
+    "cultural_sovereignty": "A Chilean family governs differently than a Japanese family. Both valid. The protocol enables, not prescribes."
+  },
+
+  "escalation": {
+    "chain": ["twinbox", "bus", "dashboard", "phone"],
+    "metaphor": "Like calling your sister when mom doesn't answer.",
+    "gate_rule": "All irreversible decisions require human approval."
+  },
+
+  "economics": {
+    "cost_per_day": "$0.03 - $0.12",
+    "hardware": "Consumer devices already owned",
+    "cloud_dependency": "None",
+    "scaling": "A million cells consume less energy than one enterprise deployment"
+  },
+
+  "reference_cell": {
+    "family": "Cortes-Madrid",
+    "location": "Los Angeles, CA",
+    "running_since": "2025-10",
+    "machines": 3,
+    "agents": 5,
+    "interactions": 9529,
+    "autonomous_executions": 340,
+    "full_outages": 0,
+    "authors": ["Monica Olivares Valenzuela", "Jose Cortes Madrid", "Elena Cortes-Madrid"]
+  }
+}
